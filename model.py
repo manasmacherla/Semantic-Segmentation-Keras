@@ -5,7 +5,7 @@ import numpy as np
 from tensorflow.keras.models import *
 from tensorflow.keras.layers import *
 
-def vgg_encoder(input_height = 224, input_width = 224, weights = 'imagenet'):
+def vgg_encoder(input_height = 224, input_width = 224):
     img_input = Input(input_height, input_width, 3)
     x = Conv2D(64, (3,3), activation = 'relu', padding = 'same', name = 'conv1_layer1')(img_input)
     x = Conv2D(64, (3,3), activation = 'relu', padding = 'same', name = 'conv2_layer1')(x)
