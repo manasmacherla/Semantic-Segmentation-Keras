@@ -40,7 +40,13 @@ def vgg_encoder(input_height = 224, input_width = 224, weights = 'imagenet'):
 
     layer5 = x
 
-    
+    path = 'C:/Users/manas/OneDrive - Clemson University/Documents/SDC_github/vgg16_weights_notop.h5'
+
+    Model(img_input, x).load_weights(path)
+
+    return img_input, [layer1, layer2, layer3, layer4, layer5]
+
+
 
 
 
